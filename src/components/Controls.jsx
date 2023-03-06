@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   IoPlayBackSharp,
   IoPlayForwardSharp,
@@ -9,11 +9,20 @@ import {
   IoPauseSharp,
 } from 'react-icons/io5';
 
-const Controls = () => {
+const Controls = ({ audioRef }) => {
   const [isPlaying, setisPlaying] = useState(false);
+
   const togglePlayPause = () => {
     setisPlaying((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (isPlaying && audioRef && audioRef.current) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying, audioRef]);
 
   return (
     <div className='controls-wrapper'>
