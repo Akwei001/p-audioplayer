@@ -10,13 +10,14 @@ const AudioPlayer = () => {
 
   //reference
   const audioRef = useRef();
+  const progressBarRef = useRef();
   console.log(audioRef);
   return (
     <div className='audio-player'>
       <div className='inner'>
-        <DisplayTrack currentTrack={currentTrack} audioRef={audioRef} />
-        <Controls audioRef={audioRef} />
-        <ProgressBar />
+        <DisplayTrack {...{ currentTrack, audioRef }} />
+        <Controls {...{ audioRef }} />
+        <ProgressBar {...{ progressBarRef, audioRef }} />
       </div>
     </div>
   );
