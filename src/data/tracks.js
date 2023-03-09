@@ -5,14 +5,22 @@ import top from './dbang-world.mp3';
 import cinematic from './cinematic-time-lapse-115672.mp3';
 import forest from './forest-lullaby-110624.mp3';
 import podcast from './the-podcast-intro-111863.mp3';
+import giveon from './Halogenix - Edits Vol. 1 - 01 GIVĒON - Favourite Mistake -Halogenix Edit-.mp3';
 
 // audio thumbnails
 import lexin from './lexin.jpeg';
 import dbanj from './dbanj.png';
 import jackson from './jackson.jpeg';
 import trinix from './trinix.jpeg';
+import cover from './cover.png';
 
 export const tracks = [
+  {
+    title: 'GIVEON - Favourite Mistake [Halogenix Edit]',
+    src: giveon,
+    author: 'Halogenix',
+    thumbnail: cover,
+  },
   {
     title: 'Trinix ft Rushawn – Its a beautiful day',
     src: beautiful,
